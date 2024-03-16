@@ -5,11 +5,13 @@ using namespace std;
 
 const int SIZE = 20;
 
-char fileName[100] = "input.txt";
+const char INPUT_FILE[100] = "input.txt";
 
-int n, v[SIZE], w[SIZE];
+int n;
+int v[SIZE];
+int w[SIZE];
 
-void bk(int k);
+void backtrack(int k);
 
 void citire();
 
@@ -18,38 +20,22 @@ void afisare(int k);
 int solutie(int k);
 
 int main() {
-    ifstream fin("input.txt");
+    citire();
 
-    if (!fin.is_open()) {
-        cerr << "Could not open " << fileName << endl;
-        return 1;
-    }
-
-    fin >> n;
-
-    cout << "n = " << n << endl;
-
-    for (int i = 0; i < n; ++i) {
-        fin >> w[i];
-        cout << "w[" << i << "] = " << w[i] << endl;
-    }
-
-    bk(0);
+    backtrack(0);
 
     return 0;
 }
 
-// 1
-// 1 2
 
-void bk(int k) {
+void backtrack(int k) {
     for (int i = 1; i <= w[k]; i++) {
         v[k] = i;
 
         if (solutie(k)) {
             afisare(k);
         } else {
-            bk(k + 1);
+            backtrack(k + 1);
         }
     }
 }
@@ -64,4 +50,22 @@ void afisare(int k) {
     }
 
     cout << endl;
+}
+
+void citire() {
+    ifstream fin(INPUT_FILE);
+
+    if (!fin.is_open()) {
+        cerr << "Could not open " << INPUT_FILE << endl;
+    }
+
+    fin >> n;
+
+    cout << "n = " << n << endl;
+
+    for (int i = 0; i < n; ++i) {
+        fin >> w[i];
+        cout << "w[" << i << "] = " << w[i] << endl;
+    }
+
 }
