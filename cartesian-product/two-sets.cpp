@@ -5,7 +5,7 @@ using namespace std;
 
 const int SIZE = 20;
 
-const char INPUT_FILE[100] = "../cartesian-product/input/input.txt";
+const char INPUT_FILE[100] = "cartesian-product/two-sets.txt";
 
 int n;
 int v[SIZE];
@@ -41,7 +41,7 @@ void backtrack(int k) {
 }
 
 int solutie(int k) {
-    return k == n - 1;
+    return k == n-1;
 }
 
 void afisare(int k) {
