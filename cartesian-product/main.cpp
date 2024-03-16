@@ -5,7 +5,7 @@ using namespace std;
 
 const int SIZE = 20;
 
-const char INPUT_FILE[100] = "input.txt";
+const char INPUT_FILE[100] = "../cartesian-product/input.txt";
 
 int n;
 int v[SIZE];
