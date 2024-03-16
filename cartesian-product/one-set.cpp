@@ -5,17 +5,17 @@ using namespace std;
 
 const int SIZE = 20;
 
-const char INPUT_FILE[100] = "cartesian-product/two-sets.txt";
+const char INPUT_FILE[100] = "cartesian-product/input/one-set.txt";
 
 int n;
+int m;
 int v[SIZE];
-int w[SIZE];
 
 void backtrack(int k);
 
 void citire();
 
-void afisare(int k);
+void afisare();
 
 int solutie(int k);
 
@@ -29,26 +29,27 @@ int main() {
 
 
 void backtrack(int k) {
-    for (int i = 1; i <= w[k]; i++) {
-        v[k] = i;
+    if (k == m) {
+        afisare();
+        return;
+    } else {
+        v[k] = 0;
 
-        if (solutie(k)) {
-            afisare(k);
-        } else {
+        while (v[k] < n) {
+            v[k]++;
             backtrack(k + 1);
         }
     }
+
 }
 
 int solutie(int k) {
-    return k == n-1;
+    return k == n - 1;
 }
 
-void afisare(int k) {
-    for (int i = 0; i <= k; i++) {
+void afisare() {
+    for (int i = 0; i < m; i++)
         cout << v[i] << " ";
-    }
-
     cout << endl;
 }
 
@@ -59,13 +60,8 @@ void citire() {
         cerr << "Could not open " << INPUT_FILE << endl;
     }
 
-    fin >> n;
+    fin >> n >> m;
 
     cout << "n = " << n << endl;
-
-    for (int i = 0; i < n; ++i) {
-        fin >> w[i];
-        cout << "w[" << i << "] = " << w[i] << endl;
-    }
-
+    cout << "m = " << m << endl;
 }
