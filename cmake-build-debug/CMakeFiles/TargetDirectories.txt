@@ -1,0 +1,3 @@
+D:/proiecteProgramare/C or C++/backtracking/cmake-build-debug/CMakeFiles/backtracking.dir
+D:/proiecteProgramare/C or C++/backtracking/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/proiecteProgramare/C or C++/backtracking/cmake-build-debug/CMakeFiles/rebuild_cache.dir
