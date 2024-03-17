@@ -12,10 +12,8 @@ int v[SIZE];
 int sol_max[SIZE];
 int g[SIZE];
 int c[SIZE];
-int s;
 int s_max;
 int G;
-int gr;
 int nr_sol;
 
 char nume[SIZE][SIZE];
@@ -54,7 +52,7 @@ void backtrack(int k) {
 }
 
 int valid(int k) {
-    gr = 0;
+    int gr = 0;
 
     for (int j = 1; j <= k; j++) {
         gr = gr + v[j] * g[j];
@@ -72,7 +70,7 @@ void optim() {
         s = s + v[j] * c[j];
     }
 
-    if ((nr_sol == 0) || (s > s_max)) {
+    if (s > s_max) {
         s_max = s;
 
         for (int j = 1; j <= n; j++) {
@@ -100,14 +98,12 @@ void citire() {
 }
 
 void afisare() {
-    nr_sol++;
-
-    cout << "Castigul maxim: " << s_max << endl;
+    cout << "Castigul maxim: " << s_max << endl << endl;
 
     for (int i = 1; i <= n; i++) {
         if (sol_max[i]) {
             cout << nume[i] << " " << g[i] << " " << c[i] << endl;
         }
-        cout << endl;
     }
+    cout << endl;
 }
