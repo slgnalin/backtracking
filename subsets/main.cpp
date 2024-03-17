@@ -55,8 +55,6 @@ int main() {
         backtrack(1);
     }
 
-
-
     return 0;
 }
 
