@@ -66,11 +66,11 @@ using namespace std;
 
 const int SIZE = 20;
 
-const char INPUT_FILE[100] = "../cartesian-product/input/main.txt";
+const char INPUT_FILE[100] = "subsets/input/main.txt";
 
 int n;
+int p;
 int v[SIZE];
-int w[SIZE];
 
 void backtrack(int k);
 
@@ -81,16 +81,22 @@ void afisare(int k);
 int solutie(int k);
 
 int main() {
+
     citire();
 
-    backtrack(0);
+    cout << "multimea vida" << endl;
+
+    for (p = 1; p <= n; p++) {
+        backtrack(1);
+    }
+
+
 
     return 0;
 }
 
-
 void backtrack(int k) {
-    for (int i = 1; i <= w[k]; i++) {
+    for (int i = v[k - 1] + 1; i <= n; i++) {
         v[k] = i;
 
         if (solutie(k)) {
@@ -102,15 +108,16 @@ void backtrack(int k) {
 }
 
 int solutie(int k) {
-    return k == n - 1;
+    return k == p;
 }
 
 void afisare(int k) {
-    for (int i = 0; i <= k; i++) {
-        cout << v[i] << " ";
+    cout << "{";
+    for (int i = 1; i < k; i++) {
+        cout << v[i] << ", ";
     }
 
-    cout << endl;
+    cout << v[k] << "}" << endl;
 }
 
 void citire() {
@@ -123,10 +130,4 @@ void citire() {
     fin >> n;
 
     cout << "n = " << n << endl;
-
-    for (int i = 0; i < n; ++i) {
-        fin >> w[i];
-        cout << "w[" << i << "] = " << w[i] << endl;
-    }
-
 }

@@ -1,6 +1,6 @@
 # ninja log v5
-1	128	7323824258791131	build.ninja	2948f4e01ca71c4b
+520	669	7323838075792744	backtracking.exe	c1eef53fe136c1eb
 1	434	7323295436334645	CMakeFiles/backtracking.dir/main.cpp.obj	be4d1c0bd7fd339f
-730	906	7323354472861849	backtracking.exe	c1eef53fe136c1eb
-4	730	7323354471151843	CMakeFiles/backtracking.dir/cartesian-product/main.cpp.obj	e28c32981de391a0
+0	250	7323844079386840	build.ninja	2948f4e01ca71c4b
 11	731	7323335051941295	CMakeFiles/backtracking.dir/cartesian-product/two-sets.cpp.obj	6ad20605cbc78a1b
+3	520	7323838074342729	CMakeFiles/backtracking.dir/cartesian-product/main.cpp.obj	e28c32981de391a0
