@@ -1,6 +1,5 @@
 # ninja log v5
-520	669	7323838075792744	backtracking.exe	c1eef53fe136c1eb
-1	434	7323295436334645	CMakeFiles/backtracking.dir/main.cpp.obj	be4d1c0bd7fd339f
-0	250	7323844079386840	build.ninja	2948f4e01ca71c4b
-11	731	7323335051941295	CMakeFiles/backtracking.dir/cartesian-product/two-sets.cpp.obj	6ad20605cbc78a1b
-3	520	7323838074342729	CMakeFiles/backtracking.dir/cartesian-product/main.cpp.obj	e28c32981de391a0
+0	163	7323936902636938	build.ninja	414a53f66a7cbed7
+3	135	7323936740932882	backtracking.exe	d55f2b6e10c41b9f
+1	421	7323923015244145	CMakeFiles/backtracking.dir/cartesian-product/main.cpp.obj	85519f33836399ca
+4	439	7323936345368139	CMakeFiles/backtracking.dir/knapsack-problem/main.cpp.obj	beefaf1db2518c22
